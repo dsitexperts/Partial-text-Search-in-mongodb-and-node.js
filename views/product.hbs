@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ pageTitle }}</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="/public/assets/style.css" type="text/css" media="screen" />
+	<style>img { width:200px; }</style>
+</head>
+<body>
+<section id="content" class="container">
+<form action="/search"> Enter your search text: 
+ <input type="text" class="form-control" id="q" name="q" placeholder="Search...">&nbsp;
+ <br>
+<input onclick="myFunction()" type="submit" value="Search It" />
+</form> 
+<script> function myFunction() 
+{ 
+var search = document.getElementById("search").value; 
+window.location = '/search?q='+search; 
+} 
+</script>
+<br>
+{{# each Equipt }}
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>{{ this.Code }}</h3>
+				<h3>{{ this.Industry }}</h3>
+				<h3>{{ this.EquipmentType }}</h3>
+				<h3>{{ this.EquipmentName }}</h3>
+				<h3>{{ this.Make }}</h3>
+				<h3>{{ this.Model }}</h3>
+				<h3>{{ this.WorkingCapacity }}</h3>
+				<img src="{{twitter}}"></img>
+            </div>
+        </div>
+{{/each}}
+
+
+</section>
+<script src="/public/assets/jquery.min.js"></script>
+<script src="/public/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/public/assets/jquery.bootcomplete.js"></script>
+<script src="/public/assets/search.js"></script>
+</body>
+</html>
+
