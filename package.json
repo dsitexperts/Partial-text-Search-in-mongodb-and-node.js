@@ -14,7 +14,7 @@
     "exphbs": "^1.2.0",
     "cookie-parser": "latest",
     "express-session": "latest",
-    "express-handlebars": "^3.0.0",
+    "express-handlebars": "^5.3.1",
     "mongoose": "latest",
     "ejs": "latest",
     "body-parser": "latest",
